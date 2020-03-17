@@ -25,6 +25,13 @@
          url('../fonts/pt-sans-v11-cyrillic_latin-700.svg#PTSans') format('svg'); /* Legacy iOS */
   }
 
+  html {
+      box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+      box-sizing: inherit;
+  }
 
   body {
       font-family: 'PT Sans', 'Arial', sans-serif;
@@ -42,11 +49,15 @@
     width: 1200px;
     margin: 0 auto; 
     background-color: #fff;
-   
+    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);   
   }
 
   a {
       text-decoration: none;
+  }
+
+  .main-header {
+      margin-bottom: 60px;
   }
 
   .main-navigation {
@@ -63,7 +74,7 @@
       height: 71px;
       left: calc(50% - 70px); 
     
-      background-image: url(../img/logo.svg);
+      background-image: url(../img/logo.svg);    
   }
 
   .main-navigation a {
@@ -83,10 +94,197 @@
       text-align: center;
   }
  
-  .picture {
-      background-image: url(../img/background-photo.jpg);
+  .picture {      
+      background-image:  url(../img/polygon.svg), url(../img/background-photo.jpg);
       background-repeat: no-repeat; 
-      background-position: 0 30%;
+      background-position: 0 calc(100% + 1px),  0 28%;
       text-align: center;     
-      padding: 75px 0 85px;
+      padding: 78px 0 85px;  
+      height: 508px;
+  }
+
+  .page-title {
+    font-size: 21px;  
+    line-height: 1.24;
+    
+    text-align: center;
+      margin: 0 auto 38px;
+      width: 440px;
+      height: 48px;
+  }
+
+  .page-title + p {
+      width: 489px;
+      line-height: 1.86;
+      text-align: center;
+      margin: 0 auto 55px;
+  }
+
+  .feature {
+      min-height: 256px;
+      background-image: url(../img/feature-picture.jpg);
+      background-repeat: no-repeat;
+      background-position: 100% 0;  
+      color: #ffffff; 
+      line-height: 21px; 
+      margin-bottom: 60px;     
+  }
+
+  .feature h3 {
+      font-size: 21px;
+      line-height: 1;
+      text-align: center;
+      width:  142px;
+      min-height: 37px;
+      margin: 0 auto 33px;         
+   }  
+
+  .feature__description {
+      background-color: #81b3d2;
+      width: 400px;   
+      height: 256px; 
+      padding: 50px 60px 64px;  
+      text-align: center;     
+  }
+
+  .feature-2 {
+      margin-bottom: 0;
+      background-image: url(../img/feature-picture-2.jpg);
+      background-position:  0 100%;  
+  }
+
+  .feature-2 .feature__description {
+      margin-left: auto;
+  }
+
+  .advantages {      
+        padding: 0 63px 85px 73px;
+  }
+
+  .advantages h2 {
+    margin: 0 0 31px;
+  }
+
+  .advantages p {
+      margin: 0;
+  }
+
+  .advantages__list {      
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .advantages__list li {
+      position: relative;
+      max-width: 284px;  
+      text-align: center;     
+      padding-top: 100px;
+      }
+
+   .advantages__list li::before {
+        content: "";
+        position: absolute;      
+        background-repeat: no-repeat;  
+        top: 0;
+        left: calc(50% - 37px);
+   }
+
+
+   .advantages__list li:first-child::before {
+    background-image: url(../img/icon-1.svg); 
+    width: 74px;
+    height: 74px;
+   
+}
+
+.advantages__list li:nth-child(2)::before {
+    background-image: url(../img/icon-3.svg); 
+    width: 74px;
+    height: 70px;  
+}
+
+.advantages__list li:nth-child(3)::before {
+    background-image: url(../img/icon-2.svg); 
+    width: 64px;
+    height: 76px;   
+}
+
+
+  .advantages-2 {
+     background-color: #eeeeee;     
+     padding: 50px 63px 64px 73px;
+     margin-bottom: 60px;
+  }
+
+  .advantages-2 h2 {
+    margin: 0 0 31px;
+  }
+
+  .advantages-2 p { 
+      margin: 0;
+  }
+
+  .advantages-2__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-between; 
+  }
+
+  .advantages-2__list li {
+      padding: 0;
+      text-align: center;    
+  }
+
+  .map {
+      text-align: center;
+  }
+
+  .map h2 {
+      margin: 0 auto 38px;
+      width: 300px;
+      font-size: 30px;
+      line-height: 36px;
+      text-align: center;
+  }
+
+  .map p {
+      width: 500px;
+      text-align: center;
+      margin: 0 auto 50px;
+      
+  }
+
+  .map .button {
+      display: inline-block;      
+      vertical-align: middle;
+      text-align: center;
+      color: #ffffff;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 1.24;
+
+      padding: 35px;    
+      width: 568px;
+      min-height: 86px;
+      background-color: #766357;
+  }
+
+
+  .main-footer {
+      min-height: 120px;
+  }
+  
+
+  .socials a {
+      display: inline-block;
+      width: 46px;
+      height: 48px;
+      background-color: #81b3d2;
   }
