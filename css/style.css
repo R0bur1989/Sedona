@@ -72,6 +72,7 @@ a {
   margin-bottom: 60px;
 }
 
+
 .main-navigation {
   position: relative;
   display: flex;
@@ -92,7 +93,7 @@ a {
 .main-navigation a {
   display: inline-block;
   vertical-align: middle;
-  padding: 19px 72px;
+  padding: 15px 72px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
@@ -104,6 +105,10 @@ a {
   line-height: 1.86;
   letter-spacing: normal;
   text-align: center;
+}
+
+.main-navigation .active-page {
+  color: #766357;
 }
 
 .picture {
@@ -255,7 +260,7 @@ a {
   text-align: center;
 }
 
-.book h2 {
+.book > h2 {
   margin: 0 auto 38px;
   width: 300px;
   font-size: 30px;
@@ -263,7 +268,7 @@ a {
   text-align: center;
 }
 
-.book p {
+.book > p {
   width: 500px;
   text-align: center;
   margin: 0 auto 50px;
@@ -294,6 +299,161 @@ a {
   height: 593px;
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
+}
+
+/* страница каталога */
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 217px;
+  padding: 30px 73px;
+  background-image: url(/img/filter-background.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 60% ;
+
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.filter .container{ 
+  display: flex;
+}
+
+.infrastructure {
+  margin-right: 115px;
+}
+
+.filter h2 {
+  font-size: 16px;
+  line-height: 1.31;
+  margin: 0 0 28px;
+}
+
+.filter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter li {
+  margin-bottom: 36px;
+}
+
+.filter li:last-child {
+  margin-bottom: 0;
+}
+
+.price .button {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  padding: 11px 33px;
+
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 auto;
+}
+
+.price .button:hover{
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.range-controls {
+  position: relative;
+  width: 317px;  
+  margin-bottom: 34px;
+  padding-top: 22px;
+ 
+  background-color: transparent;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-controls .toggle {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+
+  position: absolute;
+  top: 13px;
+  left: 0;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 20px;
+}
+
+.range-controls .toggle-max {
+  left: 140px;
+}
+
+.sort{ 
+  display: flex;
+  align-items: center;
+  padding: 30px 72px;
+}
+
+.sort h3 {
+  margin: 0;
+  margin-right: 50px;
+}
+
+.catalog-item {
+  display: flex;
+  padding: 30px 72px;
+}
+
+.catalog-item img {
+  margin-right: 30px;
+}
+
+.catalog-item h4 {
+  margin: 0;
+
+  font-size: 21px; 
+  line-height: 1.24;
+}
+
+.catalog-item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-details{
+  display: inline-block;
+  width: 110px;
+  min-height: 27px;
+  background-color: #81b3d2;  
+  color: #ffffff;
+  padding: 8px 17px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rating {
+  margin-left: auto;
 }
 
 .main-footer {
@@ -328,6 +488,13 @@ a {
   max-width: 100%;
 }
 
+.hash {
+  width: 136px;
+}
+
+.phone-number {
+  width: 225px;
+}
 
 
 .socials {
@@ -383,11 +550,62 @@ a {
     margin: 0 auto;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; 
+  
+}
+
+.modal-search input {
+    background-color: #f2f2f2;
+    border: none;
+    width: 346px;
+    height: 38px;   
+    
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-weight: bold;  
+    line-height: 1.86;
+    text-transform: uppercase;
+}
+
+.modal-search input[type="text"] {
+  padding: 15px 30px 15px 12px;
+}
+
+.modal-search input[type="number"] {
+  position: relative;
+  width: 38px;
+  height: 38px;
+}
+
+.modal-search input[type="number"]::before {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+ 
+  content: '';
+  width: 38px;
+  height: 38px;
+  background-color: #751a1a;
+  z-index: 100;
+}
+
+.modal-search input[type="number"]::after {
+  position: absolute;
+  content: ''; 
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  z-index: 100;
+}
 
 .modal-search .button {
     background-color: #81b3d2;
     width: 458px;
     min-height: 58px;
+    margin-top: 24px;   
 }
 
 .modal-show {
