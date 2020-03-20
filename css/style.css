@@ -363,6 +363,23 @@ a {
   background-color: #ffffff;
 }
 
+.price input[type="text"] {
+  background-color: transparent;
+  border: solid 2px #ffffff;  
+  font-size: 14px;
+  height: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
 .range-controls {
   position: relative;
   width: 317px;  
@@ -407,7 +424,7 @@ a {
   left: 140px;
 }
 
-.sort{ 
+.sort { 
   display: flex;
   align-items: center;
   padding: 30px 72px;
@@ -421,39 +438,84 @@ a {
 .catalog-item {
   display: flex;
   padding: 30px 72px;
+  line-height: 1;
+
 }
 
-.catalog-item img {
+
+.catalog-item > img {
   margin-right: 30px;
 }
 
 .catalog-item h4 {
-  margin: 0;
-
+  margin: 0 0 12px;
+  max-width: 250px; 
   font-size: 21px; 
-  line-height: 1.24;
+ 
 }
 
-.catalog-item > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.catalog-item .container {
+  display: flex; 
+}
+
+.stars {
+  font-size: 0;
+}
+
+.stars img:not(:last-child) {
+  margin-right: 5px;
+}
+
+.divider {
+  height: 1px;
 }
 
 .button-details{
-  display: inline-block;
+  display: block;
   width: 110px;
   min-height: 27px;
   background-color: #81b3d2;  
   color: #ffffff;
-  padding: 8px 17px;
-  line-height: 1.5;
+  padding: 7px 17px;  
+  line-height: 1;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center; 
+
+  margin: 15px 5px 0 0;
+}
+
+
+.button-book {
+  display: block;
+  width: 142px;
+  min-height: 27px;
+  background-color: #766357;  
+  color: #ffffff;
+  padding: 7px 16px;
+  line-height: 1;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
+  margin-top: 15px;
 }
 
 .rating {
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end; 
+}
+
+.rate {
+   width: 110px;
+   min-height: 27px;
+   padding: 5px 12px 6px 13px;
+   color: #666666;
+   line-height: 1;
+   text-align: center;
+   background-color: #f2f2f2;
 }
 
 .main-footer {
